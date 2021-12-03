@@ -1,0 +1,64 @@
+
+/* button */
+.search {
+    width: 90%;
+    position: relative;
+    height: 40px;
+    margin-left: 50px;
+}
+
+input {
+    height: 40px;
+    border: none;
+    outline: none;
+    padding-left: 50px;
+    width: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    z-index: 3;
+    transition: width 1s ease-out;
+    cursor: pointer;
+}
+
+input:focus {
+    border: 1px solid var(--black);
+    border-radius: 10px;
+    width: 95%;
+    z-index: 1;
+    transition: width 1s ease-in;
+}
+
+button {
+    height: 50px;
+    width: 50px;
+    color: var(--black);
+    background: none;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* header */
+
+.conterinerHeader .time{
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.conterinerHeader .time div span { 
+    text-align: center;
+    margin: auto
+} 
