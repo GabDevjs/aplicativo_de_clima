@@ -41,7 +41,7 @@ function zero(x) {
 //Aplicativo de clima 
 
 
-// --Inicio do codigo de clima 
+//Inicio do codigo de clima 
 const api = {
     key: "d35eb3757ac5c0dce2a1f108402a2ca1",
     base: "https://api.openweathermap.org/data/2.5/",
@@ -81,7 +81,7 @@ window.addEventListener('load', () => {
             console.error(`erro: ${error.message}`);
         }
     })
-    //
+
 function coordResults(lat, long) {
     fetch(`${api.base}weather?lat=${lat}&lon=${long}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`)
         .then(response => {
@@ -103,7 +103,7 @@ function coordResults(lat, long) {
 search_button.addEventListener('click', function() {
         searchResults(search_input.value)
     })
-    //
+
 search_input.addEventListener('keypress', enter)
 
 function enter(event) {
@@ -131,7 +131,7 @@ function searchResults(city) {
             displayResults(response)
         });
 }
-//
+
 function displayResults(weather) {
     console.log(weather)
 
@@ -152,19 +152,19 @@ function displayResults(weather) {
 
     low_high.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
 }
-//
+
 function dateBuilder(d) {
     let days = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
     let months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julio", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
-    let day = days[d.getDay()]; //getDay: 0-6
+    let day = days[d.getDay()];
     let date = d.getDate();
     let month = months[d.getMonth()];
     let year = d.getFullYear();
 
     return `${day}, ${date} ${month} ${year}`;
 }
-//
+
 container_temp.addEventListener('click', changeTemp)
 
 function changeTemp() {
@@ -180,8 +180,7 @@ function changeTemp() {
         temp_number.innerHTML = Math.round(c)
     }
 }
-//
+
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
-//-- /Final do codgio de clima

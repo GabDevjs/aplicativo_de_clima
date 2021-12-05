@@ -5,6 +5,8 @@
     position: relative;
     height: 40px;
     margin-left: 50px;
+    margin-top: 4px;
+    margin-bottom: 10px;
 }
 
 input {
@@ -56,9 +58,71 @@ button:focus {
     margin: auto;
     justify-content: space-between;
     text-align: center;
+    border-bottom: 0.1em solid var(--black);
 }
 
 .conterinerHeader .time div span { 
     text-align: center;
-    margin: auto
+    margin: auto;
+    text-decoration: line-throug;
 } 
+
+/* local */
+
+.containerLocal{
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+    justify-content: space-between;
+    text-align: center;   
+    margin-top: 5px;
+}
+
+.containerLocal span{
+    text-align: center;
+    margin: auto
+}
+
+/* temp */
+
+.fundo-temp{
+    background-color: rgba(250, 250, 250, 0.2);
+    border-radius: 25px;
+    width: 70%;
+    padding: 15px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.fundo-temp div {
+    text-align: center;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.info{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container-img{
+    display: flex;
+    justify-content: center;
+}
+
+.container-temp{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    color: #F2F3F4;
+    font-size: 100px;
+    font-weight: 900;
+    text-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+

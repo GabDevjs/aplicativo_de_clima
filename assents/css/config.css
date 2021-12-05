@@ -98,20 +98,27 @@ video {
 body {
     color: var(--black);
     background: var(--black);
-    font-family: "Poppins", sans-serif;
+    font-family: 'Fira Sans Condensed', sans-serif;
     height: 100vh;
     width: 100vh;
 }
 
-.conteiner{
+.conteiner {
     position: absolute;
     background-color: rgba(250, 250, 250, 0.5);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 10px;
+    border-radius: 25px;
     padding: 15px 20px;
-    width: 800px;
-    height: 500px;
+    width: 700px;
+    height: 480px;
     padding: 30px;
+}
+
+@media screen and (max-width: 410px) {
+    .conteiner {
+        width: 100vh;
+        height: 90vh;
+    }
 }
