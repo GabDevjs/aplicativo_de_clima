@@ -1,43 +1,3 @@
-//Codigo de funcionamento fo relogio 
-setInterval(function() {
-    //Seletor de hora
-    let novaHora = new Date();
-
-    let hora = novaHora.getHours();
-    let minuto = novaHora.getMinutes();
-
-    hora = zero(hora);
-    minuto = zero(minuto);
-
-    document.getElementById('horan').textContent = `${hora} : ${minuto}`;
-
-    //Mensagem
-    if (hora >= 6 && hora < 12) {
-        console.log('Bom Dia');
-        document.getElementById('bomD').textContent = " um bom dia";
-    } else if (hora >= 12 && hora < 18) {
-        console.log('Boa Tarde');
-        document.getElementById('bomD').textContent = " uma boa tarde";
-    } else if (hora >= 18 && hora <= 23) {
-        console.log('Boa Noite');
-        document.getElementById('bomD').textContent = " uma boa noite";
-    } else if (hora >= 0 && hora < 6) {
-        console.log('Boa Noite');
-        document.getElementById('bomD').textContent = " uma boa noite";
-    } else {
-        console.log('Erro');
-    }
-
-}, 1000);
-
-// Zero Vazio
-function zero(x) {
-    if (x < 10) {
-        x = '0' + x;
-    }
-    return x;
-}
-
 //Aplicativo de clima 
 
 
@@ -63,24 +23,24 @@ const low_high = document.querySelector('.media');
 
 //geo localiçao
 window.addEventListener('load', () => {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(setPosition, showError);
-        } else {
-            alert('navegador não suporta geolozalicação');
-        }
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(setPosition, showError);
+    } else {
+        alert('navegador não suporta geolozalicação');
+    }
 
-        function setPosition(position) {
-            console.log(position)
-            let lat = position.coords.latitude;
-            let long = position.coords.longitude;
-            coordResults(lat, long);
-        }
+    function setPosition(position) {
+        console.log(position)
+        let lat = position.coords.latitude;
+        let long = position.coords.longitude;
+        coordResults(lat, long);
+    }
 
-        function showError(error) {
-            alert(`erro: ${error.message}`);
-            console.error(`erro: ${error.message}`);
-        }
-    })
+    function showError(error) {
+        alert(`erro: ${error.message}`);
+        console.error(`erro: ${error.message}`);
+    }
+})
 
 function coordResults(lat, long) {
     fetch(`${api.base}weather?lat=${lat}&lon=${long}&lang=${api.lang}&units=${api.units}&APPID=${api.key}`)
@@ -100,9 +60,9 @@ function coordResults(lat, long) {
 }
 
 //buttons
-search_button.addEventListener('click', function() {
-        searchResults(search_input.value)
-    })
+search_button.addEventListener('click', function () {
+    searchResults(search_input.value)
+})
 
 search_input.addEventListener('keypress', enter)
 
